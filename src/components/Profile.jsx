@@ -1,4 +1,5 @@
 import React from 'react';
+import './Profile.css';
 
 const Profile = () => {
   return (
@@ -7,7 +8,7 @@ const Profile = () => {
         <img src="https://cdn.beach-inspector.com/static/awards/lp-header.jpg?w=1200&h=400&fit=crop" />
       </div>
       <div>
-        <img src="https://www.catster.com/wp-content/uploads/2017/11/A-Siamese-cat.jpg" />
+        <img className="profile-logo" src="https://www.catster.com/wp-content/uploads/2017/11/A-Siamese-cat.jpg" />
         descr
       </div>
       <div>
