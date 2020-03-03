@@ -3,5 +3,8 @@
   background-color: greenyellow;
 }
 .item{
-  color: #fff;
+  color: red;
+}
+.item.active{
+  color: gold;
 }
