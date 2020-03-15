@@ -7,7 +7,7 @@ const Post = (props) => {
       <img src="https://hornews.com/images/news_large/c1d4b2b8ec608ea72764c5678816d5c9.jpg" />
       {props.message}
       <div>
-        <span>Like: </span>{props.count}
+        <span>Like: </span>{props.countLikes}
       </div>
     </div>
   )
