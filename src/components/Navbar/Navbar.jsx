@@ -5,7 +5,7 @@ console.log(s);
 const Navbar = () => {
   return (
     <nav className={s.nav}>
-    <div className={s.item}>
+      <div className={s.item}>
         <NavLink to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
       </div>
       <div className={s.item}>
