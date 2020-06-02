@@ -11,12 +11,12 @@ let Users = (props) => {
 
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i + ' ');
+        pages.push(i);
     }
     return <div>
         <div className={styles.pageNumbers}>
             {pages.map(p => <span className={props.currentPage === p && styles.selectedPage}
-                                  onClick={(e) => { props.onPageChanged(p) }}>{p}</span>)}
+                onClick={(e) => { props.onPageChanged(p) }}>{p}</span>)}
         </div>
         {
             props.users.map(u => <div key={u.id}>
@@ -24,19 +24,19 @@ let Users = (props) => {
                     <div>
                         <NavLink to={'/profile/' + u.id}>
                             <img src={u.photos.small != null ? u.photos.small : userPhoto}
-                                 className={styles.photo}/>
+                                className={styles.photo} />
                         </NavLink>
                     </div>
                     <div>
                         {u.followed
                             ? <button disabled={props.followingInProgress
-                            .some(id=>id===u.id)}
-                                      onClick={() => { props.unfollow(u.id)}}>
-                            Unfollow</button>
+                                .some(id => id === u.id)}
+                                onClick={() => { props.unfollow(u.id) }}>
+                                Unfollow</button>
 
-                            : <button disabled={props.followingInProgress.some(id=>id===u.id)}
-                                      onClick={() => { props.follow(u.id)}}>
-                            Follow</button>}
+                            : <button disabled={props.followingInProgress.some(id => id === u.id)}
+                                onClick={() => { props.follow(u.id) }}>
+                                Follow</button>}
 
                     </div>
                 </span>
@@ -51,7 +51,7 @@ let Users = (props) => {
                     </span>
                 </span>
             </div>)
-            }
+        }
     </div>
 }
 
