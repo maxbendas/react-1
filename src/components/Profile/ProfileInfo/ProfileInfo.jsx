@@ -4,18 +4,15 @@ import Preloader from '../../common/Preloader/Preloader.jsx';
 import ProfileStatus from './ProfileStatus';
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = (props) => {
-    if (!props.profile) {
+const ProfileInfo = ({profile, status, updateStatus}) => {
+    if (!profile) {
         return <Preloader/>
     }
   return (
     <div className={s.content}>
-        {/*<div>
-        <img src="https://cdn.beach-inspector.com/static/awards/lp-header.jpg?w=1200&h=400&fit=crop" />
-      </div>*/}
       <div className={s.descriptionBlock}>
-          <img className={s.logo} src={props.profile.photos.large} />
-        <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+          <img className={s.logo} src={profile.photos.large} />
+        <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
       </div>
 
     </div>
